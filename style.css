@@ -1,0 +1,108 @@
+ html, body {
+      height: 100%;
+      background: #111;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    #three-container {
+
+    }
+
+    #controls, #refresh-control, #scale-controls, #photoCountSlider, #spacingSlider {
+      text-align: center;
+      margin: 20px;
+    }
+
+    #menu-toggle {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 20;
+      background: #ffaa00;
+      color: black;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .menu-container {
+      position: absolute;
+      top: 70px;
+      left: 20px;
+      background: rgba(10, 10, 10, 0.95);
+      border: 2px solid #ffaa00;
+      border-radius: 16px;
+      padding: 20px;
+      z-index: 10;
+      text-align: center;
+      box-shadow: 0 0 20px #ffaa00;
+      display: block;
+    }
+
+    .menu-container h1 {
+      color: #ffaa00;
+      margin-bottom: 20px;
+    }
+
+    .menu-container button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 24px;
+      font-size: 16px;
+      background-color: black;
+      color: #ffaa00;
+      border: 2px solid #ffaa00;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .menu-container button:hover {
+      background-color: #ffaa00;
+      color: black;
+    }
+
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+.tooltip-text {
+  width: 600px;
+  text-align: left;
+  overflow: auto;
+  padding: 10px;
+  background: #333; /* ciemnoszare tło */
+  color: #fff;       /* biały tekst */
+  font-family: Arial, sans-serif; /* normalna czcionka */
+  border: 1px solid #555; /* neutralna ramka */
+  border-radius: 6px;
+  position: absolute;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.tooltip-text.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  animation: tooltipGlitch 0.4s ease-in;
+}
+
+/* Subtelna animacja przy wejściu */
+@keyframes tooltipGlitch {
+  0% { transform: translateY(-10px) skewX(-2deg); opacity: 0; }
+  30% { transform: translateY(2px) skewX(1deg); }
+  60% { transform: translateY(-1px) skewX(-0.5deg); }
+  100% { transform: translateY(0); opacity: 1; }
+}

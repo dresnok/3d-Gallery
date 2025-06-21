@@ -1,0 +1,37 @@
+<button id="menu-toggle">✖</button>
+
+<div class="menu-container" id="menu">
+  <h1>Serious Menu</h1>
+  <hr style="margin: 10px 0; border-color: #ffaa00;">
+  <button onclick="location.href='scatola1.php'">scatola 1</button>
+  <button onclick="location.href='tela1.php'">tela 1</button>
+  <button onclick="location.href='davanti.php'">davanti</button>
+  <button onclick="location.reload()">Restart</button>
+<div class="tooltip-container">
+  <button onmouseover="showTooltip()" onmouseout="startHideTooltipTimer()">Help</button>
+  <div class="tooltip-text" id="tooltip">
+    <strong>Tips & Tricks</strong><br><br>
+    <ul>
+      <li>Wyłącz podświetlenie po najechaniu myszką</li>
+      <li>Usuń podgląd po kliknięciu</li>
+      <li>Kliknięcie otwiera zdjęcie w nowym oknie</li>
+      <li>Wyłącz pauzę</li>
+    </ul>
+    <p><strong>Dostosowanie wysokości kontenera:</strong></p>
+    <pre><code>#three-container {
+  height: 200px;
+  width: 100%;
+  display: block;
+}</code></pre>
+
+    <p><strong>Konfiguracja w skrypcie:</strong></p>
+    <pre><code>const CONFIG = {
+  defaultSpacing: 1.5,
+  ...
+}</code></pre>
+
+    <p>Tylko pierwszy skrypt jest wymagany, plus deklaracja w <code>&lt;head&gt;</code> i jedna klasa CSS.</p>
+  </div>
+</div>
+
+  </div>
